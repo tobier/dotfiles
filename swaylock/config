@@ -1,0 +1,38 @@
+ignore-empty-password
+
+key-hl-color=ffffff00
+bs-hl-color=00000000
+separator-color=00ff0000
+
+inside-color=00ff0000
+ring-color=3584E400
+line-color=3584E400
+
+inside-clear-color=ffffff00
+line-clear-color=ffffff00
+ring-clear-color=ffffff00
+
+inside-ver-color=F9758300
+inside-wrong-color=F9758300
+ring-ver-color=F9758300
+ring-wrong-color=F9758300
+line-ver-color=F9758300
+line-wrong-color=F9758300
+
+text-clear-color=FBFAFA00
+text-ver-color=FBFAFA00
+text-wrong-color=FBFAFA00
+
+#for swaylock-effects only
+screenshot
+indicator-radius=250
+scaling=fill
+fade-in=0.5
+effect-blur=8x4
+clock
+timestr=%H:%M
+datestr=%A %-d %h
+indicator
+font-size=150
+text-color=FFFFFF
+font=Fira Code Medium
