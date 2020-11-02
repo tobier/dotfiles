@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: sans-serif;
+    font-family: Fira Code;
     font-size: 14px;
 }
 
@@ -23,7 +23,7 @@ window {
 
 #workspaces button.focused {
     background: rgba(200, 200, 200, 0.1);
-    border-bottom: 3px solid #a8090e;
+    border-bottom: 3px solid #f53c3c;
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #backlight, #temperature, #tray {

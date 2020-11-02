@@ -24,15 +24,14 @@ text-ver-color=FBFAFA00
 text-wrong-color=FBFAFA00
 
 #for swaylock-effects only
-screenshot
 indicator-radius=250
 scaling=fill
+image=$HOME/.config/swaylock/lockscreen.jpeg
 fade-in=0.5
-effect-blur=8x4
 clock
 timestr=%H:%M
 datestr=%A %-d %h
 indicator
 font-size=150
 text-color=FFFFFF
-font=Fira Code Medium
+font=Fira Code

@@ -16,21 +16,26 @@ exec_always nm-applet --indicator
 
 ### Output configuration
 set $primary_display 'Philips Consumer Electronics Company PHL 272B8Q UK02032010041'
+set $wfh_display 'Goldstar Company Ltd 32GK850G PROTOTYPE'
 set $laptop_display 'Lenovo Group Limited 0x40BA 0x00000000'
 
-output * bg ~/.config/sway/wallpaper/control-stairs.jpeg fill
+output * bg ~/.config/sway/wallpaper.jpeg fill
 
 output $primary_display pos 0 0 res 2560x1440
+output $wfh_display pos 0 0 res 2560x1440
 output $laptop_display pos 2560 0 res 1920x1080
 
 exec swaymsg focus output $primary_display
+
+bindswitch --reload --locked lid:on output $laptop_display disable
+bindswitch --reload --locked lid:off output $laptop_display enable
 
 workspace 1 output $primary_display
 workspace 2 output $primary_display
 workspace 3 output $primary_display
 workspace 4 output $primary_display
-workspace 5 output $laptop_display
-workspace 6 output $laptop_display
+workspace 5 output $secondary_display
+workspace 6 output $secondary_display
 
 ### Idle configuration
 
@@ -98,10 +103,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+minus scratchpad show
 
 mode "resize" {
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 80px
+    bindsym Down resize grow height 80px
+    bindsym Up resize shrink height 80px
+    bindsym Right resize grow width 80px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -110,7 +115,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Layouts and styling
-default_border pixel
+default_border none
 gaps inner 5
 
 bar {
