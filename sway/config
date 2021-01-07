@@ -11,8 +11,9 @@ set $term kitty
 set $menu dmenu_path | wofi --show run -i | xargs swaymsg exec --
 set $www google-chrome
 
-### Network Manager
-exec_always nm-applet --indicator
+### Startup applications
+exec nm-applet --indicator
+exec lxpolkit
 
 ### Output configuration
 set $primary_display 'Philips Consumer Electronics Company PHL 272B8Q UK02032010041'
@@ -34,8 +35,8 @@ workspace 1 output $primary_display
 workspace 2 output $primary_display
 workspace 3 output $primary_display
 workspace 4 output $primary_display
-workspace 5 output $secondary_display
-workspace 6 output $secondary_display
+#workspace 5 output $secondary_display
+#workspace 6 output $secondary_display
 
 ### Idle configuration
 
@@ -113,6 +114,12 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# capture all screens to clipboard    
+bindsym Shift+Print exec grim - | wl-copy    
+    
+# capture the specified screen area to clipboard    
+bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy    
 
 ### Layouts and styling
 default_border none

@@ -2,7 +2,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["tray", "pulseaudio", "cpu", "memory", "battery", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -11,7 +11,7 @@
             "1": "",
             "2": "",
             "3": "",
-            "4": "",
+            "4": "",
             "5": "",
             "6": ""
         }
